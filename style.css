@@ -1,0 +1,204 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 25px 0 0 25px;
+    font-size: 16px;
+}
+
+.button-draw {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 18px 45px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 1.3rem;
+    border-radius: 35px;
+    margin-top: 25px;
+    transition: transform 0.2s;
+}
+
+.button-draw:hover {
+    transform: scale(1.05);
+}
+
+.name-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.name-list li {
+    background-color: #FF6B6B;
+    color: white;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0 8px;
+    margin-left: 10px;
+}
+
+.remove-btn:hover {
+    color: #FFD700;
+}
+
+.ventana-tragamonedas {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.tragamonedas-contenido {
+    background-color: #fff;
+    border: 5px solid #FFD700;
+    border-radius: 20px;
+    width: 350px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.8);
+}
+
+.pantalla-ruleta {
+    background-color: #000;
+    color: #FFF;
+    font-size: 2.5rem;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #FFD700;
+    margin-bottom: 20px;
+}
+
+@keyframes aparece {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.botones-tragamonedas {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los botones se ajusten en varias líneas */
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.botones-tragamonedas button {
+    flex: 1 1 auto; /* Los botones se ajustan al espacio disponible */
+    min-width: 120px; /* Ancho mínimo para evitar que se hagan muy pequeños */
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    margin: 5px;
+    transition: all 0.3s;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.btn-reiniciar { background-color: #ff4444; }
+.btn-votar { background-color: #4CAF50; }
+.btn-cerrar { background-color: #2196F3; }
+
+.botones-tragamonedas button:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
